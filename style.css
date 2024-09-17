@@ -212,6 +212,8 @@ footer {
 
     .conteudo {
         display: block;
+        align-items: center;
+        justify-content: space-between;
     }
 
     .conteudo img {
@@ -250,7 +252,10 @@ footer {
         }
         
         .conteudo {
-        grid-template-columns: repeat(2, 49%);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 48%;
         }
 
         .container h3 {
