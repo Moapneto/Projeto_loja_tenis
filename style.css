@@ -1,0 +1,279 @@
+*{
+    margin: 0;  /*espaçamento externo ao redor de um elemento*/
+    padding: 0; /*espaçamento entre o conteudo e a borda */
+    box-sizing: border-box;
+}
+
+body { 
+    background-color: rgb(228, 217, 217);
+    font-family: "Inria Sans", sans-serif;
+}
+
+header {
+    padding: 10px 0;
+    background-color: rgb(0, 0, 255);
+    position: sticky;/* o elemento se comporte de forma fixa no contêiner*/
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.container {
+    max-width: 1024px; /*define a largura máxima que um elemento pode ter. */
+    width: 100%; /*define a largura de um elemento*/
+    margin: 0 auto;
+}
+
+header .container {
+    display: flex; /* facilita o alinhamento e a distribuição de espaço entre itens dentro de um contêiner*/
+    justify-content: space-between; /* usada para distribuir o espaço horizontal ou vertical*/
+    align-items: center; /*alinhamento dos itens flexíveis*/
+    color: #FFF;
+    padding: 16px;
+}
+
+.container a {
+    text-decoration: none; /*definir a decoração do texto dentro de um elemento*/
+    color: #fff;
+    margin-left: 10px;
+}
+
+section .container {
+    display: flex;
+}
+
+section .sobre-loja h3 {
+    border-bottom: 2px solid rgb(102, 102, 185); /*criando linha*/
+    margin: 25px 20px 25px;
+    padding-bottom: 10px;
+
+}
+
+section p {
+    font-size: 18px; /* tamanho da fonte */
+    padding-left: 16px;
+}
+
+#about {
+    display: flex;
+    padding: 16px;
+}
+
+#about img {
+    height: 240px;
+    border-radius: 5px;
+    margin-right: 32px;
+
+}
+
+.procura {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1024px;
+    width: 100%;
+}
+
+.procura input {
+    padding: 12px;
+    width: 1024px;
+    margin-bottom: 30px;
+    align-items: center;
+    border-radius: 10px 0 0 10px;
+    border: 1px solid #fff;   
+}
+
+.procura button {
+    padding: 12px;
+    margin-bottom: 30px;
+    border-radius: 0 10px 10px 0;
+    border: 2px solid rgb(102, 102, 185);
+    cursor: pointer;
+}
+
+#carousel-imagens img {
+    height: 280px;
+    border-radius: 10px;
+}
+
+article {
+    max-width: 220px;
+    width: 100%;
+    margin: 0 auto;
+    
+}
+
+.conteudo {
+    display: flex;
+}
+
+.conteudo img {
+    height: 220px;
+    margin-bottom: 30px;
+    border-radius: 3px;
+}
+
+.conteudo h4 {
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.conteudo p {
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.conteudo button {
+    background-color: rgb(102, 102, 185);
+    color: #FFF;
+    margin-bottom: 60px;
+    padding: 6px;
+    width: 100%;
+    font-size: bold;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    
+
+}
+
+#produto h3 {
+    width: 100%;
+    margin-bottom: 16px;
+    border-bottom: 2px solid  rgb(102, 102, 185);
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+footer {
+    background-color: rgb(0, 0, 255);
+    color: #FFF;
+    width: 100%;
+    padding: 16px 0;
+    text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+    header {
+        max-width: 100%;
+    }
+
+    #about img {
+        height: 220px;
+        margin-left: 80px;
+        margin-right: 30px;
+        border-radius: 5px;
+    }
+
+    .container {
+        display: block;
+        max-width: 100%;
+        align-items: center;
+    }
+
+    header .container {
+        max-width: 90%;
+        flex-direction: column;
+    }
+
+    .container h3 {
+        text-align: center;
+    }
+
+
+    header .menu {
+        margin-top: 15px;
+    }
+    
+    .procura input {
+        max-width: 90%;
+        border-radius: 10px;
+    }
+
+    .procura button {
+        display: none;
+        display: block;
+        border-radius: 10px;
+    }
+
+    section .container {
+        display: block;
+    }
+
+    #about {
+        display: block;
+        padding: 0;
+        margin-top: 10px;
+    }
+
+    article {
+        max-width: 90%;
+    }
+
+    .conteudo {
+        display: block;
+    }
+
+    .conteudo img {
+        margin-left: 80px;
+    }
+
+    #carousel-imagens {
+        height: 340px;
+        border-radius: 5px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .conteudo h4 {
+        font-size: 1.5em
+    }
+    
+    .conteudo p {
+        font-size: 1em;
+    }
+
+    .conteudo button {
+        background-color: #285AD1;
+        color: #fff;
+        padding: 8px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        margin-bottom: 64px;
+    }
+}
+
+    @media screen and (min-width: 768px) and (max-width: 1022px) {
+        .container {
+            max-width: 1024px;
+        }
+        
+        .conteudo {
+        grid-template-columns: repeat(2, 49%);
+        }
+
+        .container h3 {
+            text-align: center;
+        }
+
+        .conteudo img {
+            height: 220px;
+            margin-left: 8px;
+            margin-bottom: 16px;
+            border-radius: 3px;
+        }
+
+        section .conteudo{
+            max-width: 90%;
+        }
+    }
+
+
+
+
+
+
+
+
+
